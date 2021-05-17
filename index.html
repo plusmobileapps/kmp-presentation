@@ -1,40 +1,128 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<title>Kotlin Multiplatform</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<img src="images/kotlin.png" width="600" />
+				<h3>Kotlin Multiplatform (KMP)</h3>
+				<h4>The sane approach to sharing code</h4>
+			</section>
+
+			<section>
+				<section>
+					<h3>Me in 2013</h3>
+					<img src="images/android-dev.png" />
+
+					<aside class="notes">
+						What phone did you have?
+						What did you learn? 
+					</aside>
+				</section>
+				<section>
+					<h5>Job for a consumer App</h5>
+					<img src="images/multiplatform.jpg" width="300" />
+
+					<p class="fragment fade-up">Written in different languages</p>
+					<p class="fragment fade-up">Different architectures</p>
+					<p class="fragment fade-up">3 separate teams</p>
+					<p class="fragment fade-up">Each with their own set of bugs</p>
+
+					<aside class="notes">
+						<li>What language does each platform use? </li>
+						<li>Bugs?</li>
+					</aside>
+				</section>
+				<section>
+					<img src="images/better-way.gif"/>
+					<p class="fragment fade-up">So what ways are there?</p>
+				</section>
+
+				<section>
+					<h4>React Native</h4>
+					<img src="images/react-native.jpeg" width="400"/>
+					<p class="fragment fade-up">Written in Javascript/Typescript</p>
+					<p class="fragment fade-up">Share business logic</p>
+					<p class="fragment fade-up">Write native and web components separately</p>
+					<p class="fragment fade-up">Kotlin/Swift developers are not fans of Javascript❌</p>
+
+
+					<aside class="notes">
+						<li>Great if you started off as a web team</li>
+						<li>What happens if you have native teams in place?</li>
+					</aside>
+				</section>
+
+				<section>
+					<h4>Flutter</h4>
+					<img src="images/flutter.png" width="400"/>
+					<p class="fragment fade-up">Written in Dart</p>
+					<p class="fragment fade-up">Same components for every platform</p>
+					<p class="fragment fade-up">Best for green field projects</p>
+					<p class="fragment fade-up">Different language than every platform🙃</p>
+
+					<aside class="notes">
+						<li>What is dart like?</li>
+						<li>designers dream & don't need to rewrite view components more than once</li>
+						<li>Great for a team of 1 - wolf pack</li>
+					</aside>
+				</section>
+
+				<section>
+					<h4>Kotlin Multiplatform</h4>
+					<img src="images/kmp.jpg" width="400"/>
+					<p class="fragment fade-up">Business logic in Kotlin compiles to each platform</p>
+					<p class="fragment fade-up">Interop with common code from native</p>
+					<p class="fragment fade-up">Kotlin helps increase productivity and increase developer satisfaction🥰</p>
+				</section>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+				  ## Agenda
+				  * KMP Architecture
+				  * How to build a repository
+				  * Testing
+				  * Future of KMP
+				</textarea>
+			  </section>
+
+			<section>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
