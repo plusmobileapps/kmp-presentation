@@ -106,26 +106,132 @@
 				</textarea>
 			</section>
 
-			<section data-auto-animate>
-				<h3>Typical Architecture</h3>
-				<img src="images/kmp-arch-view.png">
+			<section>
+				<section data-auto-animate>
+					<h3>Typical Architecture</h3>
+					<img src="images/kmp-arch-view.png">
+				</section>
+				<section data-auto-animate>
+					<h3>Typical Architecture</h3>
+					<img src="images/kmp-arch-presenter.png">
+				</section>
+				<section data-auto-animate>
+					<h3>Typical Architecture</h3>
+					<img src="images/kmp-arch-model.png">
+				</section>
+				<section data-auto-animate>
+					<h3>KMP Architecture</h3>
+					<img src="images/kmp-arch-shared.png">
+				</section>
+				<section data-auto-animate>
+					<h3>KMP Architecture</h3>
+					<img src="images/kmp-repository.png">
+				</section>
 			</section>
-			<section data-auto-animate>
-				<h3>Typical Architecture</h3>
-				<img src="images/kmp-arch-presenter.png">
+
+
+			<section>
+				<h3>Caching</h3>
+				<section>
+					<h4 class="fragment fade-up">SQL Delight</h4>	
+					<p class="fragment fade-up">Generates typesafe kotlin APIs from your SQL statements</p>
+					<p class="fragment fade-up">Mainly useful for Android & iOS</p>
+					<p class="fragment fade-up">Also supports JS, JVM, macOS, & Windows</p>
+				</section>
+
+				<section data-markdown="slides/sql-delight-gradle.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/sql-delight-file.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/sql-delight-driver.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+					data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section>
+					<h4>Demo</h4>
+					<img src="images/sqldelight-demo.gif"/>
+				</section>
 			</section>
-			<section data-auto-animate>
-				<h3>Typical Architecture</h3>
-				<img src="images/kmp-arch-model.png">
+
+			<section>
+				<h3>Networking</h3>
+				<section>
+					<h4 class="fragment fade-up">Ktor</h4>	
+					<p class="fragment fade-up">Multiplatform HTTP client</p>
+					<p class="fragment fade-up">Uses Kotlin coroutines</p>
+					<p class="fragment fade-up">Supports iOS, Android, JS, JVM, Desktop</p>
+					<p class="fragment fade-up">Can also be used for asynchronous microservice backends or web apps!</p>
+				</section>
+
+				<section>
+					<h4 class="fragment fade-up">Kotlinx Serialization</h4>	
+					<p class="fragment fade-up">Multiplatform JSON serialization</p>
+					<p class="fragment fade-up">Supports Kotlin classes marked as @Serializable and standard collections</p>
+					<p class="fragment fade-up">Serialize/Deserialize network requests/responses</p>
+					<p class="fragment fade-up">Complete multiplatform support: JVM, JS and Native</p>
+				</section>
+
+				<section data-markdown="slides/ktor-gradle.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/ktor-client.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
 			</section>
-			<section data-auto-animate>
-				<h3>KMP Architecture</h3>
-				<img src="images/kmp-arch-shared.png">
+
+			<section>
+				<h3>Putting it all together</h3>
+				<section data-markdown="slides/repository.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/di.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/android.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
+
+				<section data-markdown="slides/ios.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
 			</section>
-			<section data-auto-animate>
-				<h3>KMP Architecture</h3>
-				<img src="images/kmp-repository.png">
+
+			<section>
+				<h3>Testing</h3>
+				<section>
+					<p class="fragment fade-up">Tests in common are ran on each compiled platform</p>
+					<p class="fragment fade-up">Most ideal for assertions</p>
+					<p class="fragment fade-up">No mocking library support for every platform, but you can create mocks manually</p>
+					<p class="fragment fade-up">UI automation is done by each native platform team</p>
+				</section>
+
+				<section data-markdown="slides/testing.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15"></section>
 			</section>
+
+			<section>
+				<h3>How far can you take kmp?</h3>
+
+				<section> 
+					<p class="fragment fade-up">MVI Kotlin - consolidate presentation logic </p>
+					<img class="fragment fade-up" src="images/mvi.jpg" width="400"></img>
+					<p class="fragment fade-up">Powerful time traveling debugging feature</p>
+					<p class="fragment fade-up">Does not depend on any specific reactive framework</p>
+				</section>
+
+				<section> 
+					<p class="fragment fade-up">Decompose - BLOC pattern</p>
+					<p class="fragment fade-up">Has routing feature for pluggable UIs - Jetpack Compose, SwiftUI, React</p>
+					<p class="fragment fade-up">State Keepers to maintain state across configurations</p>
+				</section>
+
+			</section>
+
+			<section>
+				<h2>The end</h2>
+
+				<h4>Questions?</h4>
+				<a href="http://plusmobileapps.com/kmp-presentation/">http://plusmobileapps.com/kmp-presentation/</a>
+			</section>
+			
 		</div>
 	</div>
 
